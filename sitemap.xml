@@ -14,4 +14,256 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/"/>
   </url>
+  <url>
+    <loc>https://www.wehadcoo.com/about/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/about/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/projects/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/projects/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/projects/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/projects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/projects/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/reviews/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/reviews/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/reviews/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/reviews/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/reviews/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/eservices/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/eservices/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/eservices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/eservices/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/eservices/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/eservices/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/eservices/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/eservices/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/contact/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/contact/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/contact/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/foam/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/foam/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/foam/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/foam/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/foam/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/foam/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/foam/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/foam/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/water/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/water/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/water/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/water/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/water/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/water/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/water/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/water/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/thermal/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/thermal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/thermal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/thermal/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/thermal/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/thermal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/thermal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/thermal/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/polyurea/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/polyurea/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/polyurea/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/polyurea/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/polyurea/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/polyurea/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/polyurea/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/polyurea/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/rolls/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/rolls/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/rolls/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/rolls/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/rolls/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/rolls/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/rolls/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/rolls/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/cement/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/cement/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/cement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/cement/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/cement/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/cement/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/cement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/cement/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/epoxy/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/epoxy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/epoxy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/epoxy/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/epoxy/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/epoxy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/epoxy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/epoxy/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/concrete/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/concrete/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/concrete/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/concrete/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/concrete/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/concrete/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/concrete/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/concrete/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/eifs/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/eifs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/eifs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/eifs/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/eifs/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/eifs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/eifs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/eifs/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/injection/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/injection/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/injection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/injection/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/injection/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/injection/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/injection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/injection/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/repair/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/repair/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/repair/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/repair/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/repair/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/repair/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/repair/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/repair/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/services/sport/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/sport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/sport/"/>
+  </url>
+  <url>
+    <loc>https://www.wehadcoo.com/en/services/sport/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.wehadcoo.com/services/sport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.wehadcoo.com/en/services/sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.wehadcoo.com/services/sport/"/>
+  </url>
 </urlset>
