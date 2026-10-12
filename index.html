@@ -1887,6 +1887,7 @@ footer a:hover{color:#fff}
       <li class="fx"><div class="fxh"><a href="#services">أنظمة العزل والمواد</a><button type="button" class="fxt" aria-expanded="false" aria-label="عرض أنظمة العزل"></button></div><div class="fbox"><ul id="fSvc" class="flinks"></ul></div></li>
       <li><a href="#projects">المشاريع</a></li>
       <li><a href="#reviews">آراء العملاء</a></li>
+      <li><a href="/blog/">مقالات</a></li>
     </ul><ul class="fnl">
       <li class="fx"><div class="fxh"><a href="#eservices">الخدمات الإلكترونية</a><button type="button" class="fxt" aria-expanded="false" aria-label="عرض الخدمات الإلكترونية"></button></div><div class="fbox"><ul id="fEs" class="flinks"></ul></div></li>
       <li><a href="#contact">تواصل معنا</a></li>
@@ -2271,6 +2272,13 @@ function renderService(k){
 
 /* ============ REVIEWS ============ */
 /* Published reviews from the previous site, shown only when the live review store is unavailable (e.g. when hosted outside claude.ai). */
+/* ============ BACKEND (Google Apps Script) ============ */
+const API='https://script.google.com/macros/s/AKfycbxpFTQC9pVZK1AZOQ7nzzNt7HpwVoqfOZjSZ5l0cFBCJinjIjsWhcJo6287wrbz6fr61w/exec'.startsWith('http')?'https://script.google.com/macros/s/AKfycbxpFTQC9pVZK1AZOQ7nzzNt7HpwVoqfOZjSZ5l0cFBCJinjIjsWhcJo6287wrbz6fr61w/exec':'';
+async function apiPost(o){const r=await fetch(API,{method:'POST',body:JSON.stringify(o)});const j=await r.json();if(!j.ok)throw j;return j;}
+function track(ev){if(!API)return;try{const q=new URLSearchParams(location.search);const d={kind:'event',ev,page:location.pathname+location.hash,ref:document.referrer&&!document.referrer.includes(location.host)?document.referrer:'',dev:innerWidth<768?'mobile':'desktop',lang:document.documentElement.lang,utm:['utm_source','utm_medium','utm_campaign'].map(k=>q.get(k)).filter(Boolean).join(' / ')};navigator.sendBeacon?navigator.sendBeacon(API,JSON.stringify(d)):fetch(API,{method:'POST',body:JSON.stringify(d),keepalive:true});}catch(_){}}
+(function(){let seen=false;try{seen=sessionStorage.getItem('wb_v');sessionStorage.setItem('wb_v','1');}catch(_){}if(!seen)track('visit');
+document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.getAttribute('href')||'';if(h.includes('wa.me'))track('whatsapp');else if(h.startsWith('tel:'))track('call');else if(h.startsWith('mailto:'))track('email');else if(/#eservices/.test(h))track('open_form');},true);})();
+const b64=file=>new Promise((ok,no)=>{const fr=new FileReader();fr.onload=()=>ok(String(fr.result).split(',')[1]);fr.onerror=no;fr.readAsDataURL(file);});
 const SITE_REVIEWS=[
 {name:'سلطان عقيل',service:'عزل مائي وحراري',rating:5,text:'شركة محترفة في تقديم العزل المائي والحراري، تعمل الاختبارات بعد العمل وقبل التسليم مع ضمان ممتد للعمل. شكرًا لكم',createdAt:Date.parse('2026-09-20T18:01:09Z')},
 {name:'Ahmed',service:'عزل سطح مبنى جديد على الكود السعودي',rating:5,text:'تعاملت معهم في عزل بيتي على الكود السعودي الجديد. للأمانة شفت منهم الجودة والأمانة والتمكن في مجال العزل، حتى مسؤول التأمين مدح العمل',createdAt:Date.parse('2026-09-20T15:40:35Z')},
@@ -2317,6 +2325,10 @@ $('#rateStars').addEventListener('change',e=>{$('#rateWord').textContent=RATE_WO
 $('#rvText').addEventListener('input',e=>$('#rvLen').textContent=e.target.value.length);
 async function initReviews(){
   renderReviews();
+  if(API){
+    try{const j=await (await fetch(API+'?action=reviews')).json();REVIEWS=(j.reviews||[]).concat(SITE_REVIEWS);}catch(_){REVIEWS=SITE_REVIEWS.slice();}
+    rvLoaded=true;renderReviews();return;
+  }
   try{rvDB=window.claude&&window.claude.use?await window.claude.use('db'):null;}catch(_){rvDB=null;}
   if(!rvDB){REVIEWS=SITE_REVIEWS.slice();rvLoaded=true;renderReviews();return;}
   rvDB.collection('reviews').orderBy('createdAt','desc').limit(500).onSnapshot(s=>{
@@ -2335,6 +2347,13 @@ $('#rvForm').addEventListener('submit',async e=>{
   setErr(f.elements.text,text.length<8?'اكتب رأيك في جملة على الأقل':'');
   if(!ok)return;
   const review={name,service,rating,text,createdAt:Date.now(),source:'site'};
+  if(API){
+    const b=$('#rvSubmit');b.disabled=true;
+    try{await apiPost({kind:'review',name,service,rating,text});f.reset();$('#rvLen').textContent='0';$('#rateWord').textContent='اختر من 1 إلى 5 نجوم';msg.classList.add('ok');msg.textContent='شكرًا لك! وصلنا رأيك، وسيظهر على الموقع بعد مراجعته.';}
+    catch(_){msg.classList.add('bad');msg.textContent='تعذّر إرسال رأيك الآن. حاول مرة أخرى بعد قليل.';}
+    finally{b.disabled=false;}
+    return;
+  }
   if(!rvDB){
     const t=`تقييم جديد من موقع وهاد البنيان\nالاسم: ${name}\nالتقييم: ${rating} من 5\n${service?'الخدمة: '+service+'\n':''}الرأي: ${text}`;
     msg.innerHTML=`أرسل رأيك لنا على واتساب لننشره: <a href="https://wa.me/966552027770?text=${encodeURIComponent(t)}" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:underline">إرسال على واتساب</a>`;
@@ -2524,7 +2543,7 @@ function showForm(k){
   <div class="wf-progress"><ol>${F.sec.map((s,i)=>`<li data-sec="${i}"><i>${i+1}</i><span>${s.h}</span></li>`).join('')}</ol><div class="bar"><b id="wfBar"></b></div><span id="wfPct">0%</span></div>
   <form class="wf-form" novalidate data-k="${k}">
     ${F.sec.map((s,i)=>`<section class="wf-sec" data-sec="${i}" style="--i:${i}"><header><i>${i+1}</i><div><h3>${s.h}</h3><span>${s.en}</span></div></header><div class="wf-grid">${s.f.map(x=>fieldHTML(x,k)).join('')}</div></section>`).join('')}
-    <div class="wf-foot"><button class="btn btn-nv wf-send" type="submit">${fi('send')} إرسال الطلب</button><small>سيتم التواصل معك في أقرب وقت ممكن.</small><p class="note">${fi('lock')} بياناتك تُستخدم فقط للتواصل معك بخصوص هذا الطلب.</p></div>
+    <div class="wf-foot"><input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><button class="btn btn-nv wf-send" type="submit">${fi('send')} إرسال الطلب</button><small>سيتم التواصل معك في أقرب وقت ممكن.</small><p class="note">${fi('lock')} بياناتك تُستخدم فقط للتواصل معك بخصوص هذا الطلب.</p></div>
   </form>`;
   if(pendingSubj){const d=$('#formHost .sow-d');if(d)d.value=pendingSubj;else{const m=$('#formHost [name=msg]');if(m)m.value='بخصوص: '+pendingSubj;}pendingSubj='';}
   renderFiles(k);wfProgress();
@@ -2582,11 +2601,28 @@ fh.addEventListener('submit',async e=>{
   const d=new Date(),ref=`WB-${String(d.getFullYear()).slice(2)}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}-${Math.random().toString(36).slice(2,6).toUpperCase()}`;
   const rows=[];F.sec.forEach(s=>s.f.forEach(x=>{if(x.t==='files')return;const fld=f.querySelector(`.fld[data-n="${x.n}"]`);const v=fld?fldValue(fld):'';if(v)rows.push([x.l||s.h,x.t==='stars'?v+' من 5':v]);}));
   const text=[`${F.t} — موقع وهاد البنيان`,`رقم الطلب: ${ref}`].concat(rows.map(([l,v])=>`${l}: ${v}`)).concat(files.length?[`المرفقات: ${files.length} ملف (سأرسلها في هذه المحادثة)`]:[]).join('\n');
-  try{const db=window.claude&&window.claude.use?await window.claude.use('db'):null;if(db)await db.collection('requests').add({ref,type:k,title:F.t,fields:Object.fromEntries(rows),files:files.map(x=>({name:x.name,size:x.size})),createdAt:Date.now()});}catch(_){}
+  let sent=false;
+  if(API){
+    const btn=f.querySelector('.wf-send'),lbl=btn.innerHTML,st=t=>{btn.innerHTML=fi('send')+' '+t;};
+    btn.disabled=true;
+    try{
+      st('جاري الإرسال…');
+      const base={ref,title:F.t,fields:Object.fromEntries(rows),lang:document.documentElement.lang,page:location.href,hp:(f.querySelector('[name=hp]')||{}).value||''};
+      await apiPost(Object.assign({kind:'request',files:files.length},base));
+      for(let i=0;i<files.length;i++){st(`جاري رفع الملفات ${i+1} / ${files.length}…`);await apiPost({kind:'file',ref,name:files[i].name,type:files[i].type,data:await b64(files[i])});}
+      if(files.length)await apiPost(Object.assign({kind:'done'},base));
+      sent=true;
+    }catch(_){sent=false;}
+    btn.disabled=false;btn.innerHTML=lbl;
+  }
   const url='https://wa.me/966552027770?text='+encodeURIComponent(text);
-  $('#formHost').innerHTML=`<div class="wf-done"><div class="okmark"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="m15 27 7 7 15-15"/></svg></div>
-   <h3>تم تجهيز طلبك</h3><p>رقم الطلب <b class="ref">${ref}</b>. أكمل الإرسال على واتساب ليصل لفريقنا مباشرة${files.length?'، ثم أرسل المرفقات في نفس المحادثة':''}.</p>
-   <div class="wf-sum"><dl>${rows.map(([l,v])=>`<dt>${esc(l)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${files.length?`<div class="sum-files"><b>المرفقات (${files.length})</b><ul>${files.map(x=>`<li>${esc(x.name)} <small>${fmtSize(x.size)}</small></li>`).join('')}</ul></div>`:''}</div>
+  const sum=`<div class="wf-sum"><dl>${rows.map(([l,v])=>`<dt>${esc(l)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${files.length?`<div class="sum-files"><b>المرفقات (${files.length})</b><ul>${files.map(x=>`<li>${esc(x.name)} <small>${fmtSize(x.size)}</small></li>`).join('')}</ul></div>`:''}</div>`;
+  const mark=`<div class="okmark"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="m15 27 7 7 15-15"/></svg></div>`;
+  $('#formHost').innerHTML=sent?`<div class="wf-done">${mark}
+   <h3>تم إرسال طلبك بنجاح</h3><p>رقم الطلب <b class="ref">${ref}</b>. وصل طلبك إلى فريقنا، وسنتواصل معك في أقرب وقت.</p>${sum}
+   <div class="wf-acts"><button type="button" class="btn btn-nv" id="wfNew">طلب جديد</button><a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/966552027770">${fi('wa')} تواصل على واتساب</a></div></div>`
+   :`<div class="wf-done">${mark}
+   <h3>تم تجهيز طلبك</h3><p>رقم الطلب <b class="ref">${ref}</b>. أكمل الإرسال على واتساب ليصل لفريقنا مباشرة${files.length?'، ثم أرسل المرفقات في نفس المحادثة':''}.</p>${sum}
    <div class="wf-acts"><a class="btn btn-nv" target="_blank" rel="noopener" href="${url}">${fi('wa')} أرسل الطلب على واتساب</a><button type="button" class="btn btn-ghost" id="wfNew">طلب جديد</button></div></div>`;
   FILES[k]=[];
   $('#wfNew').onclick=()=>showForm(k);
