@@ -67,7 +67,7 @@ if(grid){var cat='all',q='';var cards=$$('.card',grid);
 var pd=$('[data-product]');
 if(pd){var slug=pd.dataset.product,qi=$('[data-qty]',pd),pe=$('[data-price]',pd);
   function curV(){var r=$('input[name=v]:checked',pd);return r?r.value:'';}
-  $$('input[name=v]',pd).forEach(function(r){r.addEventListener('change',function(){pe.textContent=fmt(+r.dataset.price);});});
+  $$('input[name=v]',pd).forEach(function(r){r.addEventListener('change',function(){pe.textContent=fmt(+r.dataset.price);if(r.dataset.img){var im=$('.pd-img img',pd);if(im)im.src=r.dataset.img;}});});
   $$('[data-q]',pd).forEach(function(b){b.addEventListener('click',function(){qi.value=Math.max(1,Math.min(999,(+qi.value||1)+(+b.dataset.q)));});});
   $('[data-add-pd]',pd).addEventListener('click',function(){add(slug,curV(),Math.max(1,Math.min(999,parseInt(qi.value,10)||1)));});
 }
