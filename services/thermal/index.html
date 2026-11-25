@@ -2326,7 +2326,7 @@ $('#rvText').addEventListener('input',e=>$('#rvLen').textContent=e.target.value.
 async function initReviews(){
   renderReviews();
   if(API){
-    try{const j=await (await fetch(API+'?action=reviews')).json();REVIEWS=(j.reviews||[]).concat(SITE_REVIEWS);}catch(_){REVIEWS=SITE_REVIEWS.slice();}
+    try{const j=await (await fetch(API+'?action=reviews')).json();{const _k=r=>String(r.text||"").replace(/[^\p{L}\p{N}]/gu,"").slice(0,40);const _s=new Set();REVIEWS=(j.reviews||[]).concat(SITE_REVIEWS).filter(r=>{const k=_k(r);if(!k||_s.has(k))return false;_s.add(k);return true;});}}catch(_){REVIEWS=SITE_REVIEWS.slice();}
     rvLoaded=true;renderReviews();return;
   }
   try{rvDB=window.claude&&window.claude.use?await window.claude.use('db'):null;}catch(_){rvDB=null;}
